@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import "@/app/globals.scss";
+
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+
+import "normalize.css";
+import "@/app/globals.scss";
 
 export const metadata: Metadata = {
   title: "Clima Agora - Previsão do Tempo em Tempo Real",
