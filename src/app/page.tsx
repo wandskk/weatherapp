@@ -7,6 +7,7 @@ import Container from "@/components/Container/Container";
 import SearchInput from "@/components/SearchInput/SearchInput";
 import H1 from "@/components/Typography/H1";
 import WeatherContent from "@/components/Weather/WeatherContent";
+import WeatherContentBox from "@/components/Weather/WeatherContentBox";
 
 import { WeatherServices } from "@/services/weather";
 import { WeatherData } from "@/core/model/WeatherData";
@@ -19,8 +20,9 @@ const Page = () => {
 
   const getWeatherData = React.useCallback(async (text: string = "") => {
     const cityName = text.trim() || "Sao Paulo";
-    const data = await WeatherServices.getWeatherByCityName(cityName);
-    if (data) setWeather(data);
+    const weatherData = await WeatherServices.getWeatherByCityName(cityName);
+
+    if (weatherData) setWeather(weatherData);
   }, []);
 
   const getSearch = () =>
@@ -41,7 +43,11 @@ const Page = () => {
           placeholder="Digite o nome da cidade"
           onClick={getSearch}
         />
-        {weather && <WeatherContent data={weather} />}
+        {weather && (
+          <WeatherContentBox>
+            <WeatherContent data={weather} />
+          </WeatherContentBox>
+        )}
       </Container>
     </Section>
   );

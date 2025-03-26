@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-
 import "normalize.css";
 import "@/styles/globals.scss";
 
@@ -20,9 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <Header />
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );
