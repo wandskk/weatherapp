@@ -3,7 +3,7 @@ import React from "react";
 import "@/styles/Section/Section.scss";
 
 export interface SectionProps {
-  children: React.ReactElement | string;
+  children: React.ReactNode | string;
   className?: string;
 }
 

@@ -1,0 +1,38 @@
+@use "../vars.scss" as *;
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+
+  &__input {
+    padding: 10px;
+    border-radius: 2rem 0 0 2rem;
+    border: none;
+    outline: 0;
+    max-width: 300px !important;
+    width: 100%;
+    flex: 1;
+  }
+
+  &__button {
+    display: flex;
+    border-radius: 0 2rem 2rem 0;
+    border: none;
+    outline: 0;
+    height: 100%;
+    padding: 10px;
+    background-color: $primary-color-yellow;
+    color: $primary-color-black;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color-pink;
+      color: $primary-color-white;
+    }
+  }
+}

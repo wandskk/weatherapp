@@ -1,7 +1,7 @@
 @use "../vars.scss" as *;
 
 .container {
-  max-width: $breakpoint-xl;
+  max-width: $breakpoint-xs;
   width: 100%;
   padding: 0 $breakpoint-padding;
   margin: 0 auto;
